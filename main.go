@@ -28,11 +28,7 @@ func init() {
 	fmt.Println("Prueba")
 
 	file, _ := ioutil.ReadFile("recipes.json")
-	algo := json.Unmarshal([]byte(file), &recipes)
-
-	fmt.Println("****************************")
-	fmt.Println(algo)
-	fmt.Println("****************************")
+	_ = json.Unmarshal([]byte(file), &recipes)
 }
 
 func NewRecipeHandler(c *gin.Context) {
